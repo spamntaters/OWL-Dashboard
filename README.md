@@ -206,6 +206,12 @@ Edit `apps/api/data/mock_data.py` to adjust:
 - The Vite dev server proxies `/api` requests to the Flask backend automatically
 - No database is used — all data is generated in-memory on server start
 
+## What's next?
+- Adding a DB layer is the obvious next step but to build a good usable schema would mean more requirements-gathering to understand how this simple dashboard fits into the broader application.
+- With more time, I would add a PATCH endpoint to mark an alert as read.
+- If data used in this dashboard was to be needed on other unrelated pages, the Context API would need to be brought in for state management.
+- As we shift from mock data to persistent data from a DB, then we could consider bringing in tanstack query to help avoid common problems such as graceful error handling, pagination, query caching and cache invalidation.
+
 ---
 
 ## License
